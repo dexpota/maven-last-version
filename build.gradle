@@ -4,7 +4,7 @@ plugins {
 }
 
 group 'me.destro.intellij.plugins'
-version '0.1'
+version '0.2'
 
 sourceCompatibility = 1.8
 
@@ -25,4 +25,8 @@ patchPluginXml {
     changeNotes """
       Add change notes here.<br>
       <em>most HTML tags may be used</em>"""
+}
+publishPlugin {
+    username intellijPublishUsername
+    password intellijPublishPassword
 }
