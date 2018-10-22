@@ -33,7 +33,7 @@ public class MavenLatestLibraryVersion extends MacroBase {
             return null;
         }
 
-        String gid = gid_result.toString(); // "com.squareup.retrofit2"
+        String gid = gid_result.toString(); // ""
         String artifact = artifact_result.toString(); // retrofit
 
         MavenOrgHelper helper = new MavenOrgHelper();

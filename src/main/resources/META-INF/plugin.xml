@@ -1,21 +1,13 @@
 <idea-plugin>
     <id>me.destro.intellij.plugins.last-version</id>
-    <name>Plugin display name here</name>
-    <vendor email="support@yourcompany.com" url="http://www.yourcompany.com">YourCompany</vendor>
+    <name>qmaven</name>
+    <vendor email="destro.fabrizio@gmail.com" url="http://www.destro.me">destro.me</vendor>
 
     <description><![CDATA[
-    Enter short description for your plugin here.<br>
-    <em>most HTML tags may be used</em>
+    Retrieve the latest version of a library on maven.org.
     ]]></description>
 
-    <!-- please see http://www.jetbrains.org/intellij/sdk/docs/basics/getting_started/plugin_compatibility.html
-         on how to target different products -->
-    <!-- uncomment to enable plugin in all products
-    <depends>com.intellij.modules.lang</depends>
-    -->
-
     <extensions defaultExtensionNs="com.intellij">
-        <!-- Add your extensions here -->
         <liveTemplateMacro implementation="me.destro.intellij.plugins.qmaven.MavenLatestLibraryVersion"/>
     </extensions>
 
