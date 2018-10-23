@@ -12,7 +12,7 @@ public class MavenOrgHelper {
 
     public MavenOrgHelper() {
         Retrofit retrofit = new Retrofit.Builder()
-                .baseUrl("http://search.maven.org/solrsearch/")
+                .baseUrl("http://maven.google.com/")
                 .addConverterFactory(MoshiConverterFactory.create())
                 .build();
         
