@@ -12,8 +12,8 @@ public class GroupIndexResponse {
     public List<Library> libraries;
 
     @Root
-    class Library {
+    public class Library {
         @Attribute(name="versions")
-        String versions;
+        public String versions;
     }
 }

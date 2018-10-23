@@ -17,7 +17,7 @@ public class GoogleMavenHelper {
         service = retrofit.create(GoogleMaven.class);
     }
 
-    Call<GroupIndexResponse> groupIndex(String groupPath) {
+    public Call<GroupIndexResponse> groupIndex(String groupPath) {
         return service.groupIndex(groupPath.replace(".", "/"));
     }
 }

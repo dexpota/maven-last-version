@@ -8,6 +8,7 @@
     ]]></description>
 
     <extensions defaultExtensionNs="com.intellij">
+        <liveTemplateMacro implementation="me.destro.intellij.plugins.qmaven.GoogleMavenLatestLibraryVersion"/>
         <liveTemplateMacro implementation="me.destro.intellij.plugins.qmaven.MavenLatestLibraryVersion"/>
     </extensions>
 
