@@ -9,6 +9,7 @@ import me.destro.intellij.plugins.qmaven.api.GoogleMavenHelper;
 import me.destro.intellij.plugins.qmaven.api.MavenOrgHelper;
 import me.destro.intellij.plugins.qmaven.api.model.GroupIndexResponse;
 import me.destro.intellij.plugins.qmaven.api.model.SelectResponse;
+import okhttp3.ResponseBody;
 import org.jetbrains.annotations.NotNull;
 import org.jetbrains.annotations.Nullable;
 import retrofit2.Call;
@@ -18,7 +19,7 @@ import java.io.IOException;
 
 public class GoogleMavenLatestLibraryVersion extends MacroBase {
     public GoogleMavenLatestLibraryVersion() {
-        super("googleMgavenLatestLibraryVersion", "Retrieve the latest version of a library on maven.org.");
+        super("googleMavenLatestLibraryVersion", "Retrieve the latest version of a library on maven.org.");
     }
 
     @Nullable
@@ -39,20 +40,20 @@ public class GoogleMavenLatestLibraryVersion extends MacroBase {
         String artifact = artifact_result.toString();
 
         GoogleMavenHelper helper = new GoogleMavenHelper();
-        Call<GroupIndexResponse> call = helper.groupIndex("android.arch.lifecycle");
+        Call<ResponseBody> call = helper.groupIndex("android.arch.lifecycle");
 
         TextResult result;
         try {
-            Response<GroupIndexResponse> response = call.execute();
-            GroupIndexResponse select = response.body();
+            Response<ResponseBody> response = call.execute();
 
-            if (select != null && select.libraries != null && select.libraries.size() > 0) {
-                result = new TextResult(select.libraries.get(0).versions);
+            if (response != null && response.body() != null) {
+                result = new TextResult(response.body().string());
             }else {
                 result = null;
             }
         } catch (IOException e) {
             result = null;
+            result = new TextResult("error");
             e.printStackTrace();
         }
 

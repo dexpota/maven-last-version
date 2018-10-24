@@ -1,6 +1,7 @@
 package me.destro.intellij.plugins.qmaven.api;
 
 import me.destro.intellij.plugins.qmaven.api.model.GroupIndexResponse;
+import okhttp3.ResponseBody;
 import retrofit2.Call;
 import retrofit2.Retrofit;
 import retrofit2.converter.simplexml.SimpleXmlConverterFactory;
@@ -10,14 +11,14 @@ public class GoogleMavenHelper {
 
     public GoogleMavenHelper() {
         Retrofit retrofit = new Retrofit.Builder()
-                .baseUrl("http://search.maven.org/solrsearch/")
+                .baseUrl("http://maven.google.com/")
                 .addConverterFactory(SimpleXmlConverterFactory.create())
                 .build();
 
         service = retrofit.create(GoogleMaven.class);
     }
 
-    public Call<GroupIndexResponse> groupIndex(String groupPath) {
+    public Call<ResponseBody> groupIndex(String groupPath) {
         return service.groupIndex(groupPath.replace(".", "/"));
     }
 }
