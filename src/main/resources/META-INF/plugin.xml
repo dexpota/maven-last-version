@@ -10,4 +10,6 @@
         <liveTemplateMacro implementation="me.destro.intellij.plugins.qmaven.MavenLatestLibraryVersion"/>
     </extensions>
 
+    <depends>com.intellij.modules.java</depends>
+
 </idea-plugin>

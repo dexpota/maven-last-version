@@ -19,7 +19,7 @@ dependencies {
 }
 
 intellij {
-    version '2018.2.4'
+    version '2018.1.6'
 }
 patchPluginXml {
     changeNotes "Initial release of the plugin."
