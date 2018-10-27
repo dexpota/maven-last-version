@@ -19,6 +19,7 @@ dependencies {
 }
 
 intellij {
+    // The value of this parameter changes the sinceBuild's value of plugins.xml
     version '2018.1.6'
 }
 patchPluginXml {
