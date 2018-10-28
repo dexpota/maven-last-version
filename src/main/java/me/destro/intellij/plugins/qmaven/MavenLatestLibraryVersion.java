@@ -5,6 +5,7 @@ import com.intellij.codeInsight.template.ExpressionContext;
 import com.intellij.codeInsight.template.Result;
 import com.intellij.codeInsight.template.TextResult;
 import com.intellij.codeInsight.template.macro.MacroBase;
+import com.intellij.openapi.components.ServiceManager;
 import me.destro.intellij.plugins.qmaven.api.MavenOrgHelper;
 import me.destro.intellij.plugins.qmaven.api.model.SelectResponse;
 import org.jetbrains.annotations.NotNull;
@@ -36,7 +37,7 @@ public class MavenLatestLibraryVersion extends MacroBase {
         String gid = gid_result.toString();
         String artifact = artifact_result.toString();
 
-        MavenOrgHelper helper = new MavenOrgHelper();
+        MavenOrgHelper helper = ServiceManager.getService(MavenToolboxService.class).mavenOrgHelper;
         Call<SelectResponse> call = helper.search(gid, artifact);
         
         TextResult result;

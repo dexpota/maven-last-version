@@ -5,6 +5,7 @@ import com.intellij.codeInsight.template.ExpressionContext;
 import com.intellij.codeInsight.template.Result;
 import com.intellij.codeInsight.template.TextResult;
 import com.intellij.codeInsight.template.macro.MacroBase;
+import com.intellij.openapi.components.ServiceManager;
 import com.intellij.openapi.diagnostic.LoggerRt;
 import me.destro.intellij.plugins.qmaven.api.GoogleMavenHelper;
 import okhttp3.ResponseBody;
@@ -49,7 +50,7 @@ public class GoogleMavenLatestLibraryVersion extends MacroBase {
         String gid = gid_result.toString();
         String artifact = artifact_result.toString();
 
-        GoogleMavenHelper helper = new GoogleMavenHelper();
+        GoogleMavenHelper helper = ServiceManager.getService(MavenToolboxService.class).googleMavenHelper;
         Call<ResponseBody> call = helper.groupIndex(gid);
 
         TextResult result;

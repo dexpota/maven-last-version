@@ -8,6 +8,7 @@
     <extensions defaultExtensionNs="com.intellij">
         <liveTemplateMacro implementation="me.destro.intellij.plugins.qmaven.GoogleMavenLatestLibraryVersion"/>
         <liveTemplateMacro implementation="me.destro.intellij.plugins.qmaven.MavenLatestLibraryVersion"/>
+        <applicationService serviceImplementation="me.destro.intellij.plugins.qmaven.MavenToolboxService"/>
     </extensions>
 
     <depends>com.intellij.modules.java</depends>
