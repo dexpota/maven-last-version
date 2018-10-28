@@ -29,7 +29,7 @@ public class GoogleMavenLatestLibraryVersion extends MacroBase {
     static LoggerRt Logger = LoggerRt.getInstance(GoogleMavenLatestLibraryVersion.class);
 
     public GoogleMavenLatestLibraryVersion() {
-        super("googleMavenLatestLibraryVersion", "Retrieve the latest version of a library on maven.org.");
+        super("mavenGoogleCom", "Retrieve the latest version of a library on maven.org.");
     }
 
     @Nullable

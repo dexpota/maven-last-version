@@ -16,7 +16,7 @@ import java.io.IOException;
 
 public class MavenLatestLibraryVersion extends MacroBase {
     public MavenLatestLibraryVersion() {
-        super("mavenLatestLibraryVersion", "Retrieve the latest version of a library on maven.org.");
+        super("mavenDotOrg", "Retrieve the latest version of a library on maven.org.");
     }
 
     @Nullable
@@ -33,8 +33,8 @@ public class MavenLatestLibraryVersion extends MacroBase {
             return null;
         }
 
-        String gid = gid_result.toString(); // ""
-        String artifact = artifact_result.toString(); // retrofit
+        String gid = gid_result.toString();
+        String artifact = artifact_result.toString();
 
         MavenOrgHelper helper = new MavenOrgHelper();
         Call<SelectResponse> call = helper.search(gid, artifact);
