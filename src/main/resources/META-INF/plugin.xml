@@ -1,7 +1,7 @@
 <idea-plugin>
-    <id>me.destro.intellij.plugins.last-version</id>
-    <name>Last Maven Library Version</name>
-    <description>Retrieve the latest version of a library on maven.org.</description>
+    <id>me.destro.intellij.plugins.maven-macros-toolbox</id>
+    <name>Maven Macros Toolbox</name>
+    <description>A toolbox defining a bunch of macros to query Maven repositories and retrieve information about hosted libraries.</description>
 
     <vendor email="destro.fabrizio@gmail.com" url="http://www.destro.me">destro.me</vendor>
 
