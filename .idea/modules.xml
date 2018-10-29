@@ -4,7 +4,6 @@
     <modules>
       <module fileurl="file://$PROJECT_DIR$/maven-macros-toolbox.iml" filepath="$PROJECT_DIR$/maven-macros-toolbox.iml" />
       <module fileurl="file://$PROJECT_DIR$/.idea/modules/maven-macros-toolbox_main.iml" filepath="$PROJECT_DIR$/.idea/modules/maven-macros-toolbox_main.iml" group="maven-macros-toolbox" />
-      <module fileurl="file://$PROJECT_DIR$/.idea/modules/maven-macros-toolbox_test.iml" filepath="$PROJECT_DIR$/.idea/modules/maven-macros-toolbox_test.iml" group="maven-macros-toolbox" />
     </modules>
   </component>
 </project>
